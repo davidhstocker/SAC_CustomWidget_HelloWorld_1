@@ -1,9 +1,7 @@
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-      <style>
-      </style>
-      <span id="theText">Hello World</<span>
+
     `;
 
     customElements.define('com-sap-sample-helloworld1', class HelloWorld1 extends HTMLElement {
@@ -11,8 +9,11 @@
 
 		constructor() {
 			super(); 
-			let shadowRoot = this.attachShadow({mode: "open"});
-			shadowRoot.appendChild(tmpl.content.cloneNode(true));
+			this._shadowRoot = this.attachShadow({mode: "open"});
+            this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
+            this._tagContainer;
+            this._tagType = "h1:h1";
+            this._tagText = "";
 		}
 
         //Fired when the widget is added to the html DOM of the page
