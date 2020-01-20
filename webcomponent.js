@@ -13,12 +13,12 @@
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._tagContainer;
             this._tagType = "h1:h1";
-            this._tagText = "";
+            this._tagText = "Hello World";
 		}
 
         //Fired when the widget is added to the html DOM of the page
         connectedCallback(){
-        
+            this.redraw();
         }
 
          //Fired when the widget is removed from the html DOM of the page (e.g. by hide)
@@ -49,6 +49,8 @@
         
         }
         */
+
+        redraw(){}
     
     
     });
