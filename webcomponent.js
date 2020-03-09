@@ -47,7 +47,7 @@
         //  If you don't need to react to resizes, you can save CPU by leaving it uncommented.
         /*
         onCustomWidgetResize(width, height){
-        
+            redraw()
         }
         */
 
